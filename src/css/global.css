@@ -1,0 +1,228 @@
+@import url("normalize.css");
+@import url("typography.css");
+@import url("colors.css");
+@import url("elevations.css");
+@import url("layout.css");
+@import url("grid.css");
+@import url("image.css");
+@import url("nav.css");
+
+html {
+    font-size: var(--baseFontSize);
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--bodyFontFamily);
+    font-weight: 400;
+    line-height: 1.65;
+    color: var(--textColor);
+    background: var(--background);
+}
+
+header {
+    /* --headerBkg: var(--darkBlue); */
+    /* color: white; */
+    height: var(--headerHeight);
+    background: var(--background);
+    box-shadow: var(--level-2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--containerPadding);
+}
+
+header nav a {
+    color: var(--textColor);
+    text-decoration: none;
+    border-bottom: solid 2px var(--attention);
+}
+
+header nav a + a {
+    margin-left: 10px;
+}
+
+main {
+    padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
+
+}
+
+footer {
+    --footerTextColor: var(--lightGrey) ;
+    color: var(--footerTextColor);
+    background: var(--black);
+    padding: 2rem var(--containerPadding);
+    text-align: center;
+  }
+  
+  footer a {
+    color: var(--footerTextColor);
+  }
+  
+  footer p {
+    margin-bottom: 0;
+    max-width: none;
+  }
+
+p {
+    margin-bottom: 1.15rem;
+    max-width: 40em;
+}
+
+p a,
+blockquote a {
+    color: var(--black);
+    text-decoration: none;
+    border-bottom: solid 2px var(--primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--headingFontFamily);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+h1 {
+    font-size: var(--h1);
+}
+
+h2 {
+    font-size: var(--h2);
+}
+
+h3 {
+    font-size: var(--h3);
+}
+
+h4 {
+    font-size: var(--h4);
+}
+
+h5 {
+    font-size: var(--h5);
+}
+
+small,
+.text_small {
+    font-size: var(--smallText);
+}
+
+.dark {
+    --background: var(--black);
+    --textColor: var(--lightGrey);
+}
+
+blockquote {
+    margin: 10px;
+    padding: 2em;
+    background: white;
+    box-shadow: var(--level-3);
+}
+
+label {
+    display: block;
+    font-size: var(--smallText);
+}
+
+input,
+textarea {
+    border: var(--line);
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+
+::placeholder {
+    color: var(--grey);
+}
+
+textarea {
+    width: 100%;
+}
+
+select {
+    border: var(--line);
+}
+
+hr {
+    border-top: var(--line);
+}
+
+button {
+    --buttonColor: var(--primary);
+    appearance: none;
+    background-color: var(--buttonColor);
+    color: var(--textColor);
+    border-radius: 10px;
+    border: none;
+    padding: 5px 25px;
+    box-shadow: var(--level-1);
+    transition: 0.2s ease-in-out box-shadow;
+}
+
+button:hover {
+    box-shadow: var(--level-2);
+}
+
+button[disabled] {
+    opacity: 0.4;
+}
+
+button.cancel {
+    --buttonColor: var(--danger);
+    --textColor: white;
+}
+
+button.small {
+    font-size: var(--smallText);
+}
+
+.layout {
+    /*Top padding is whatever we want plus our headerHeight*/
+    padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
+}
+
+.grid {
+    --gridCols: 2;
+    display: block;
+    grid-template-columns: repeat(var(--gridCols), 1fr);
+}
+
+.cols-3 {
+    --gridCols: 3;
+}
+
+.flex {
+    --justify-content: space-between;
+    display: flex;
+    justify-content: var(--justify-content);
+}
+
+.flex-around {
+    --justify-content: space-around;
+}
+
+@media only screen and (min-width: 500px) {
+    :root {
+        --baseFontSize: 112%;
+    }
+
+    .grid {
+        display: grid;
+    }
+}
+
+.fake-logo {
+    font-size: var(--baseFontSize);
+    margin: 0;
+}
+
+
+
+
+
+
+

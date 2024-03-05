@@ -1,0 +1,13 @@
+:root {
+    --baseFontSize: 100%;
+    --h1: 3em;
+    --h2: 2.441em;
+    --h3: 1.953em;
+    --h4: 1.563em;
+    --h5: 1.25em;
+    --smallText: 0.8em;
+
+    --headingFontFamily: ivymode;
+    --bodyFontFamily: le-monde-livre-std;
+}
+

@@ -1,0 +1,18 @@
+{
+  "name": "outside-the-frame",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "3.0.0-alpha.5",
+    "@11ty/eleventy-img": "^4.0.2",
+    "eleventy-plugin-metagen": "^1.8.3"
+  }
+}

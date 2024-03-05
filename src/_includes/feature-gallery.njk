@@ -1,0 +1,27 @@
+<div class="gallery">
+    <ul class="gallery-list">
+        {% for image in gallery %}
+        {%- if image.homePage === true %}
+        <li class="gallery-item">
+            <div class="image-block">
+                <a
+                    href="/street/{{ image.title | slug }}"
+                    aria-label="Gallery image {{ image.title }}"
+                >
+                {% img
+                    src=image.src,
+                    alt=image.alt,
+                    className="gallery-photo",
+                    sizes="(max-width: 480px) 80vw, (min-width: 640px) 80vw, (min-width: 950px) 80vw, 80vw"
+                %}
+                </a>
+                <div class="block-details">
+                    <p>{{ image.date }}</p>
+                    <h2><a href="/street/{{ image.title | slug }}">{{ image.title }}</a></h2>
+                </div>
+            </div>
+        </li>
+        {%- endif -%}
+        {% endfor %}
+    </ul>
+</div>

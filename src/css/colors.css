@@ -1,0 +1,18 @@
+:root {
+    --green: #00ebc7;
+    --red: #ff5470;
+    --yellow: #8e8e8e;
+    --black: #1b2d45;
+    --darkBlue: #00214d;
+    --grey: #bfbfbf;
+    --lightGrey: #f2f4f6;
+
+    /* Define Colors intentions */
+    --primary: var(--green);
+    --danger: var(--red);
+    --attention: var(--yellow);
+    --background: var(--lightGrey);
+    --textColor: var(--black);
+    --lineColor: var(--grey);
+    --line: solid 1px var(--grey);
+}
