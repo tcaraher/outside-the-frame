@@ -1,3 +1,8 @@
+---
+eleventyNavigation:
+    key: Home
+---
+
 <!DOCTYPE html>
   <head>
   {% include "baseHead.njk" %}
@@ -6,8 +11,9 @@
   <body>
     {% include "header.njk" %}
     <main>
-        <div>
-          
+        <div class="hero-container">
+            <h1 class="hero-container__heading">Outside The Frame</h1>
+            <p class="hero-container__subheading">A photography portfolio.</p>
         </div>
         {% include "home-gallery.njk" %}
 

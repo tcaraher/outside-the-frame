@@ -7,6 +7,7 @@
 @import url("image.css");
 @import url("nav.css");
 
+
 html {
     font-size: var(--baseFontSize);
     box-sizing: border-box;
@@ -32,52 +33,53 @@ header {
     padding: 0 var(--containerPadding);
 }
 
-header nav a {
-    color: var(--textColor);
-    text-decoration: none;
-    border-bottom: solid 2px var(--attention);
-}
+/*header nav a {*/
+/*    color: var(--textColor);*/
+/*    text-decoration: none;*/
+/*    border-bottom: solid 2px var(--attention);*/
+/*}*/
 
-header nav a + a {
-    margin-left: 10px;
-}
+/*header nav a + a {*/
+/*    margin-left: 10px;*/
+/*}*/
 
-.header__text--heading {
-    font-size: var(--h1) ;
-    text-decoration: none;
-    color: var(--textColor);
-}
+
 
 main {
-    padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
+    padding: calc(var(--headerHeight) - 3rem) 0;
 
 }
 
 footer {
-    --footerTextColor: var(--lightGrey) ;
+    --footerTextColor: var(--lightGrey);
     color: var(--footerTextColor);
     background: var(--black);
     padding: 2rem var(--containerPadding);
     text-align: center;
-  }
-  
-  footer a {
+}
+
+footer a {
     color: var(--footerTextColor);
-  }
-  
-  footer p {
+}
+
+footer p {
     margin-bottom: 0;
     max-width: none;
-  }
+}
 
 p {
     margin-bottom: 1.15rem;
     max-width: 40em;
 }
 
+a {
+    color: var(--textColor);
+    text-decoration: none;
+}
+
 p a,
 blockquote a {
-    color: var(--black);
+    color: var(--textColor);
     text-decoration: none;
     border-bottom: solid 2px var(--primary);
 }
@@ -92,40 +94,16 @@ h5 {
     line-height: 1.15;
 }
 
-h1 {
-    font-size: var(--h1);
-}
-
-h2 {
-    font-size: var(--h2);
-}
-
-h3 {
-    font-size: var(--h3);
-}
-
-h4 {
-    font-size: var(--h4);
-}
-
-h5 {
-    font-size: var(--h5);
-}
 
 small,
 .text_small {
     font-size: var(--smallText);
 }
 
-.dark {
-    --background: var(--black);
-    --textColor: var(--lightGrey);
-}
-
 blockquote {
     margin: 10px;
     padding: 2em;
-    background: white;
+    background: var(--background);
     box-shadow: var(--level-3);
 }
 
@@ -191,6 +169,8 @@ button.small {
     padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
 }
 
+
+
 .grid {
     --gridCols: 2;
     display: block;
@@ -226,9 +206,35 @@ button.small {
     margin: 0;
 }
 
+/*Hero styles*/
+.hero-container {
+    margin: 0 auto;
+    /*border: solid 2px;*/
+    min-height: 40rem;
+    max-height: 70vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*background-color: var(--secondaryBackground) ;*/
+}
+
+.hero-container__heading {
+    margin: 0;
+    font-size: var(--h1xl);
+}
+
+.hero-container__subheading {
+    font-size: var(--h4);
+    margin: 0.5rem 0;
+    color: var(--secondaryTextColor);
+}
 
 
-
-
-
-
+.genre-content {
+    font-size: var(--h4);
+    text-align: center;
+    height: 20rem;
+    width: 80vw;
+}

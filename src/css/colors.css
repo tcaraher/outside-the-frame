@@ -2,17 +2,31 @@
     --green: #00ebc7;
     --red: #ff5470;
     --yellow: #8e8e8e;
-    --black: #1b2d45;
+    --black: #050408;
+    --darkGrey: #1f1f1f7d ;
     --darkBlue: #00214d;
-    --grey: #bfbfbf;
+    --grey: #757575;
     --lightGrey: #f2f4f6;
+    --white: #f7f7f7;
 
     /* Define Colors intentions */
     --primary: var(--green);
     --danger: var(--red);
     --attention: var(--yellow);
-    --background: var(--lightGrey);
+    --background: var(--white);
+    --secondaryBackground: var(--lightGrey);
     --textColor: var(--black);
+    --secondaryTextColor: var(--grey);
     --lineColor: var(--grey);
     --line: solid 1px var(--grey);
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --textColor: var(--white);
+        --secondaryTextColor: var(--lightGrey);
+        --secondaryBackground: var(--darkGrey);
+        --background: var(--black);
+
+    }
 }

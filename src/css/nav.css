@@ -8,8 +8,19 @@ ul#menu a {
   text-decoration: none;
 }
 
-#menu li.active a {
-  background: black;
-  padding: .5em 2em .5em 2em;
-  color: white;
+
+.header__nav--text {
+  color: var(--textColor);
+  text-decoration: none;
+}
+
+.header__text--heading {
+  font-size: var(--h3);
+  text-decoration: none;
+  color: var(--textColor);
+}
+
+.active {
+  border-bottom: solid 2px var(--attention);
+
 }

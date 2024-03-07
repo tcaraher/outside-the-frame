@@ -75,8 +75,8 @@ const photoExifData = [
     'Lens': 'Fujinon 23mm f/2'
   },
   {
-    'SourceFile': 'charlie\'s-ghosts.jpg',
-    'Title': 'Charlie\'s Ghosts',
+    'SourceFile': 'ghosts-of-charlie.jpg',
+    'Title': 'Ghosts of Charlie',
     'ImageDescription': 'Paris',
     'CreateDate': '2015:02:16 16:36:18',
     'AltTextAccessibility': 'Blurry Skaters in front of Charlie Hebdo banner',
@@ -239,8 +239,8 @@ const photoExifData = [
     'Lens': 'iPhone 14 Pro back triple camera 6.86mm f/1.78'
   },
   {
-    'SourceFile': 'i\'ve-got-a-secret.jpg',
-    'Title': 'I\'ve got a secret',
+    'SourceFile': 'secrets.jpg',
+    'Title': 'Secrets',
     'ImageDescription': 'Paris Metro',
     'CreateDate': '2015:02:15 20:29:21',
     'AltTextAccessibility': 'man on paris metro',
@@ -550,6 +550,7 @@ const gallery = photoExifData.map(obj => {
     // Checks if photo has been tagged to be featured
     homePage: obj.Subject.includes('portfolio-feature'),
     date: obj.CreateDate,
+    location: obj.ImageDescription,
     src: obj.SourceFile,
     alt: obj.AltTextAccessibility || "",
     imgDir: './src/photos/'

@@ -3,10 +3,9 @@ pagination:
     data: gallery
     size: 1
     alias: image
-permalink: "/{{image.tag}}/{{ image.title | slug }}/" 
+permalink: "/{{image.tag}}/{{ image.title | slug }}/"
 ---
 
-<!DOCTYPE html>
 
 <head>
     <link rel="stylesheet" href="https://use.typekit.net/euo1fyy.css">
@@ -16,33 +15,32 @@ permalink: "/{{image.tag}}/{{ image.title | slug }}/"
 <body>
     {% include "header.njk" %}
     <main>
-        <div class="full-photo-img">
-            <div class="image-container">
+        <div class="photo-block photo-block--feature" >
                 {% img
                 src=image.src,
                 alt=image.alt,
-                className="showcase-img",
+                className=".photo-block__img photo-block__img--feature",
                 sizes="(max-width: 480px) 80vw, (min-width: 640px) 800vw, (min-width: 1000px) 80vw, 80vw"
                 %}
-                <div class="image-description">
-                    <h1 class="h2">{{ image.title }}</h1>
+                <div class="photo-info">
+                    <h1 class="photo-info__title">{{ image.title }}</h1>
+                    <p class="photo-block__date">{{ image.date }}</p>
+                    <p class=""> {{ image.location }} </p>
                 </div>
-                <div class="prev-next">
-                    {% if pagination.href.previous %}
-                    <a class="prev" href="{{ pagination.href.previous }}"><span class="lt">&lt;</span> Prev</a>
-                    {% endif %}
-                    {% if pagination.href.next %}
-                    {% if not pagination.href.previous %}
-                    <a class="next" style="margin-left: auto; margin-right: 0;" href="{{ pagination.href.next }}">Next
-                        <span class="gt">&gt;</span></a>
-                    {% else %}
-                    <a class="next" href="{{ pagination.href.next }}">Next <span class="gt">&gt;</span></a>
-                    {% endif %}
-                    {% endif %}
-                </div>
-            </div>
+{#                <div class="prev-next">#}
+{#                    {% if pagination.href.previous %}#}
+{#                    <a class="prev" href="{{ pagination.href.previous }}"><span class="lt">&lt;</span> Prev</a>#}
+{#                    {% endif %}#}
+{#                    {% if pagination.href.next %}#}
+{#                    {% if not pagination.href.previous %}#}
+{#                    <a class="next" style="margin-left: auto; margin-right: 0;" href="{{ pagination.href.next }}">Next#}
+{#                        <span class="gt">&gt;</span></a>#}
+{#                    {% else %}#}
+{#                    <a class="next" href="{{ pagination.href.next }}">Next <span class="gt">&gt;</span></a>#}
+{#                    {% endif %}#}
+{#                    {% endif %}#}
+{#                </div>#}
         </div>
     </main>
 </body>
 
-</html>
