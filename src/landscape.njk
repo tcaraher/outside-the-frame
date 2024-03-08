@@ -1,19 +1,15 @@
 ---
+layout: layout.njk
 pageTitle: Landscape Photography
 slugPrefix: landscape
 eleventyNavigation:
     key: Landscape
 ---
 
-{% include "baseHead.njk" %}
-
-<body>
-    {% include "header.njk" %}
-    <div class="genre-content flex flex--center">
-        <h1 class="genre-content__heading">Landscape Photography</h1>
-        <blockquote class="genre-content__quote">
-            "I believe the world is incomprehensibly beautiful - an endless prospect of magic and wonder." - Ansel Adams
-        </blockquote>
-    </div>
-    {% include "page-gallery.njk" %}
-</body>
+<div class="genre-content flex flex--center">
+    <h1 class="genre-content__heading">Landscape Photography</h1>
+    <blockquote class="genre-content__quote">
+        "I believe the world is incomprehensibly beautiful - an endless prospect of magic and wonder." - Ansel Adams
+    </blockquote>
+</div>
+{% include "page-gallery.njk" %}

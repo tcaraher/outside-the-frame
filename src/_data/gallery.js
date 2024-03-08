@@ -1,3 +1,7 @@
+const { DateTime } = require("luxon");
+
+
+
 const photoExifData = [
   {
     'SourceFile': 'about-to-cross-a-line.jpg',
@@ -540,6 +544,12 @@ const photoExifData = [
     'Lens': 'iPhone 14 Pro back triple camera 6.86mm f/1.78'
   }]
 
+// Formats the exifDate into a readable string. Using luxon npm package as these exif dates come very abnormally formatted I think
+const formatDate = (exifDate) => {
+  const dt = DateTime.fromFormat( exifDate , "yyyy:MM:dd HH:mm:ss");
+  return dt.toFormat("DDD");
+}
+
 const gallery = photoExifData.map(obj => {
 
 
@@ -549,7 +559,7 @@ const gallery = photoExifData.map(obj => {
     tag: obj.Subject.includes('landscape') ? 'landscape' : obj.Subject.includes('street') ? 'street' : '',
     // Checks if photo has been tagged to be featured
     homePage: obj.Subject.includes('portfolio-feature'),
-    date: obj.CreateDate,
+    date: formatDate(obj.CreateDate),
     location: obj.ImageDescription,
     src: obj.SourceFile,
     alt: obj.AltTextAccessibility || "",
@@ -562,6 +572,9 @@ module.exports = function () {
   return gallery
 }
 
+// const dt = DateTime.fromFormat("2023:04:23 13:44:32", "yyyy:MM:dd HH:mm:ss");
+// const formatted = dt.toFormat("dd/MM/yyyy");
+// console.log(formatted);
 // {
 //     "title": "Foggy Mountain Dew",
 //   "tag": "landscape",

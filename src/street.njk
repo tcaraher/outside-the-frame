@@ -1,21 +1,16 @@
 ---
+layout: layout.njk
 pageTitle: Street Photography
 slugPrefix: street
 eleventyNavigation:
     key: Street
 ---
 
-{% include "baseHead.njk" %}
-
-<body>
-    {% include "header.njk" %}
-    <main>
-        <div class="genre-content flex flex--center">
-            <h1 class="genre-content__heading">Street Photography</h1>
-            <blockquote class="genre-content__quote">“Photography is, for me, a spontaneous impulse coming from an ever attentive eye which captures
-                the moment and its eternity.” - Henri Cartier-Bresson
-            </blockquote>
-        </div>
-        {% include "page-gallery.njk" %}
-    </main>
-</body>
+<div class="genre-content flex flex--center">
+    <h1 class="genre-content__heading">Street Photography</h1>
+    <blockquote class="genre-content__quote">“Photography is, for me, a spontaneous impulse coming from an ever
+        attentive eye which captures
+        the moment and its eternity.” - Henri Cartier-Bresson
+    </blockquote>
+</div>
+{% include "page-gallery.njk" %}

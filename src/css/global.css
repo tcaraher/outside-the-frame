@@ -59,28 +59,41 @@ footer {
     color: var(--footerTextColor);
     background: var(--black);
     padding: 2rem var(--containerPadding);
-    text-align: center;
 }
 
-footer a {
-    color: var(--footerTextColor);
-}
+/*footer a {*/
+/*    color: var(--footerTextColor);*/
+/*}*/
 
 footer p {
     margin-bottom: 0;
     max-width: none;
 }
 
+.footer__info--tile {
+    margin: 0 auto;
+    font-size: var(--h4);
+}
+
+.footer__info--copyright {
+    font-size: var(--smallText);
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    text-align: right;
+}
+
 p {
-    font-size: 1em;
+    font-size: 1.2em;
     margin-bottom: 1.15rem;
     max-width: 40em;
-
 }
 
 a {
     color: var(--textColor);
-    text-decoration: none;
 }
 
 p a,

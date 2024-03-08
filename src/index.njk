@@ -1,22 +1,13 @@
 ---
+layout: layout.njk
 eleventyNavigation:
     key: Home
 ---
 
-<!DOCTYPE html>
-  <head>
-  {% include "baseHead.njk" %}
-  <title>Home Page</title>
-</head>
-  <body>
-    {% include "header.njk" %}
-    <main>
-        <div class="hero-container">
-            <h1 class="hero-container__heading">Outside The Frame</h1>
-            <p class="hero-container__subheading">A photography portfolio.</p>
-        </div>
-        {% include "home-gallery.njk" %}
 
-    </main>
-    {% include "footer.njk" %}
-  </body>
+<div class="hero-container">
+    <h1 class="hero-container__heading">Outside The Frame</h1>
+    <p class="hero-container__subheading">A photography portfolio.</p>
+</div>
+{% include "home-gallery.njk" %}
+
