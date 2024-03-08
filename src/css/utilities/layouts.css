@@ -1,0 +1,36 @@
+:root {
+    --containerPadding: 2.5%;
+    /*often used to evenly space items based off the header height*/
+    --headerHeight: 4em;
+    /*Sets gallery photo sizes and auto grid break*/
+    --gallery-photo-size: 30em;
+}
+
+
+.grid--auto {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(var(--gallery-photo-size), 1fr));
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    /*margin: 0 auto;*/
+}
+
+.flex--center {
+    justify-content: center;
+    flex-direction: column;
+}
+
+.flex--col {
+    flex-direction: column;
+}
+
+.flex--between {
+    justify-content: space-between;
+}
+
+
+

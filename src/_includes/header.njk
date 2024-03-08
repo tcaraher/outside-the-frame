@@ -1,18 +1,13 @@
 <header>
-  <a href="/index.html" class="header__text--heading">Outside The Frame</a>
-  <nav>
-    {% set navPages = collections.all | eleventyNavigation %}
-    <ul id="menu">
-      {%- for entry in navPages %}
-        <li>
-          <a {% if entry.url == page.url %} class="active" {% endif %} class="header__nav--text" href="{{ entry.url | url }}">{{ entry.title }}</a>
-        </li>
-      {%- endfor %}
-    </ul>
-{#    <a href="/index.html">Home</a>#}
-{#    <a href="/page-01">About</a>#}
-{#    <a href="/page-02">Contact</a>#}
-{#    <a href="/street">Street</a>#}
-{#    <a href="/landscape">Landscape</a>#}
-  </nav>
+    <a href="/index.html" class="header__text--heading">Outside The Frame</a>
+    <nav>
+        {% set navPages = collections.all | eleventyNavigation %}
+        <ul id="menu">
+            {%- for entry in navPages %}
+                <li>
+                    <a {% if entry.url == page.url %} class="active" {% endif %} class="header__nav--text"
+                                                                                 href="{{ entry.url | url }}">{{ entry.title }}</a>
+                </li>
+            {%- endfor %}
+    </nav>
 </header>

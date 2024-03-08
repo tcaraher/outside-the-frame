@@ -1,0 +1,36 @@
+header {
+    height: var(--headerHeight);
+    background: var(--secondaryBackground);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 var(--containerPadding);
+}
+
+ul#menu li {
+    display: inline;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+ul#menu a {
+    text-decoration: none;
+}
+
+
+.header__nav--text {
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+.header__text--heading {
+    font-size: var(--h3);
+    text-decoration: none;
+    color: var(--textColor);
+}
+
+.active {
+    border-bottom: solid 2px var(--attention);
+
+}

@@ -1,69 +1,51 @@
-
-
-// const { eleventyImageTransformPlugin } = require("@11ty/eleventy-img");
-const Image = require("@11ty/eleventy-img");
-const metagen = require("eleventy-plugin-metagen");
-const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
-const { DateTime } = require("luxon");
-
+const Image = require('@11ty/eleventy-img')
+const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
 
 module.exports = function (eleventyConfig) {
 
-  eleventyConfig.addPassthroughCopy("./src/css");
-  // eleventyConfig.addPassthroughCopy("./src/images");
+  eleventyConfig.addPassthroughCopy('./src/css')
 
-  eleventyConfig.addPlugin(metagen);
-  eleventyConfig.addPlugin(eleventyNavigationPlugin);
+  eleventyConfig.addPlugin(eleventyNavigationPlugin)
 
-
-  eleventyConfig.addShortcode("img", async function ({ src, alt, widths, className, imgDir, sizes = "100vw" }) {
+  // Config for image component. See docs for img plug in - very similar to this.
+  eleventyConfig.addShortcode('img', async function ({ src, alt, widths, className, imgDir, sizes = '100vw' }) {
     if (alt === undefined) {
-      throw new Error(`Missing \`alt\` on responsive image from: ${src}`);
+      throw new Error(`Missing \`alt\` on responsive image from: ${src}`)
     }
-    
-    const IMAGE_DIR = imgDir || "src/photos/";
-    const metadata = await Image(IMAGE_DIR + src, {
-      widths: widths || [640, 1920, "auto"],
-      formats: ["webp", "jpeg"],
-      urlPath: "/img/",
-      outputDir: "_site/img",
-      // filenameFormat: function (src, width) {
-      //   const extension = path.extname(src);
-      //   const name = path.basename(src, extension);
-    
-      //   return `${name}-${width}w.${format}`;
-      // },
-      defaultAttributes: {
-        loading: "lazy",
-        decoding: "async"
-      }
-      
-    });
 
+    const IMAGE_DIR = imgDir || 'src/photos/'
+    const metadata = await Image(IMAGE_DIR + src, {
+      widths: widths || [640, 1920, 'auto'],
+      formats: ['webp', 'jpeg'],
+      urlPath: '/img/',
+      outputDir: '_site/img',
+
+      defaultAttributes: {
+        loading: 'lazy',
+        decoding: 'async'
+      }
+    })
 
     let imageAttributes = {
-			alt,
-			sizes,
-			loading: "lazy",
-			decoding: "async",
+      alt,
+      sizes,
+      loading: 'lazy',
+      decoding: 'async',
       class: className || '',
-		};
+    }
 
-    
-    return Image.generateHTML(metadata, imageAttributes);
-  });
+    return Image.generateHTML(metadata, imageAttributes)
+  })
 
   return {
     dir: {
-      input: "src",
-      output: "_site",
-      layouts: "_includes/layouts",
-      includes: "_includes",
+      input: 'src',
+      output: '_site',
+      layouts: '_includes/layouts',
+      includes: '_includes',
     },
-    templateFormats: ["md", "liquid", "njk"],
+    templateFormats: ['md', 'liquid', 'njk'],
     passthroughFileCopy: true
   }
 
-
-
-};
+}

@@ -7,13 +7,37 @@
     --h4: 1.563em;
     --h5: 1.25em;
     --smallText: 0.9em;
-
     --headingFontFamily: ivymode;
     --bodyFontFamily: le-monde-livre-std;
 }
 
-/*@media only screen and (max-width: 640px) {*/
-/*    :root {*/
-/*        --baseFontSize: 2.5em;*/
-/*    }*/
-/*}*/
+p {
+    font-size: 1.2em;
+    margin-bottom: 1.15rem;
+    max-width: 40em;
+    font-weight: normal;
+}
+
+a {
+    color: var(--textColor);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: var(--headingFontFamily);
+    font-weight: 400;
+    line-height: 1.15;
+}
+
+.text_small {
+    font-size: var(--smallText);
+}
+
+.underline {
+    text-decoration: underline;
+    text-decoration-thickness: 0.05rem;
+    text-underline-offset: 0.3rem;
+}

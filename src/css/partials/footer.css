@@ -1,0 +1,28 @@
+footer {
+    flex-shrink: 0;
+    --footerTextColor: var(--lightGrey);
+    color: var(--footerTextColor);
+    background: var(--secondaryBackground);
+    padding: 2rem var(--containerPadding);
+}
+
+footer p {
+    margin-bottom: 0;
+    max-width: none;
+}
+
+.footer__info--tile {
+    margin: 0 auto;
+    font-size: var(--h4);
+}
+
+.footer__info--copyright {
+    font-size: var(--smallText);
+}
+
+.footer__links {
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    text-align: right;
+}

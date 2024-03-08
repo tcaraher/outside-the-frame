@@ -22,6 +22,8 @@
     --boxShadowBg: var(--background);
 }
 
+/*Sets color theme based on pre-defined user preference*/
+
 @media (prefers-color-scheme: dark) {
     body {
         --textColor: var(--white);

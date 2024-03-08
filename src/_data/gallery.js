@@ -461,6 +461,7 @@ const photoExifData = [
     "CreateDate": "2017:05:08 12:26:27",
     "AltTextAccessibility": "Panorama of ridgeline",
     "Subject": [
+      "landscape",
       "Brandon",
       "Hiking",
       "portfolio"
@@ -713,7 +714,7 @@ const gallery = photoExifData.map(photo => {
 
   return {
     title: photo.Title,
-    // Checks if the exif keywords(called Subject) contain the relevant  tags
+    // Checks if the exif keywords(called Subject in exif for some reason) contain the relevant tags, puts them in relevant folder/slug in _site via pagination permalink
     tag: photo.Subject.includes('landscape') ? 'landscape' : photo.Subject.includes('street') ? 'street' : '',
     // Checks if photo has been tagged to be featured
     homePage: photo.Subject.includes('portfolio-feature'),

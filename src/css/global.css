@@ -1,13 +1,12 @@
-@import url("normalize.css");
 @import url("typography.css");
 @import url("colors.css");
 @import url("elevations.css");
-@import url("layout.css");
-@import url("grid.css");
-@import url("image.css");
-@import url("nav.css");
+@import url("layouts.css");
+@import url("photos.css");
+@import url("header.css");
+@import url("footer.css");
 
-html,body {
+html, body {
     height: 100%;
 }
 
@@ -17,6 +16,7 @@ html {
 }
 
 body {
+    margin: 0;
     font-family: var(--bodyFontFamily);
     font-weight: 400;
     line-height: 1.65;
@@ -25,21 +25,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
-header {
-    /* --headerBkg: var(--darkBlue); */
-    /* color: white; */
-    height: var(--headerHeight);
-    background: var(--secondaryBackground);
-    box-shadow: var(--box-shadow);
-    /*border-bottom: solid 0.5px;*/
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 var(--containerPadding);
-}
-
-
 
 main {
     padding: calc(var(--headerHeight) + 3rem) 3em;
@@ -50,169 +35,11 @@ article {
     margin: 0 auto;
 }
 
-footer {
-    flex-shrink: 0;
-    --footerTextColor: var(--lightGrey);
-    color: var(--footerTextColor);
-    background: var(--secondaryBackground);
-    padding: 2rem var(--containerPadding);
-}
-
-/*footer a {*/
-/*    color: var(--footerTextColor);*/
-/*}*/
-
-footer p {
-    margin-bottom: 0;
-    max-width: none;
-}
-
-.footer__info--tile {
-    margin: 0 auto;
-    font-size: var(--h4);
-}
-
-.footer__info--copyright {
-    font-size: var(--smallText);
-}
-
-.footer__links {
-    display: flex;
-    flex-direction: column;
-    justify-content: right;
-    text-align: right;
-}
-
-p {
-    font-size: 1.2em;
-    margin-bottom: 1.15rem;
-    max-width: 40em;
-}
-
-a {
-    color: var(--textColor);
-}
-
-p a,
-blockquote a {
-    color: var(--textColor);
-    text-decoration: none;
-    border-bottom: solid 2px var(--primary);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-    font-family: var(--headingFontFamily);
-    font-weight: 400;
-    line-height: 1.15;
-}
-
-
-small,
-.text_small {
-    font-size: var(--smallText);
-}
-
-blockquote {
-    margin: 10px;
-    padding: 2em;
-    background: var(--background);
-    box-shadow: var(--level-3);
-}
-
-label {
-    display: block;
-    font-size: var(--smallText);
-}
-
-input,
-textarea {
-    border: var(--line);
-    border-radius: 4px;
-    padding: 2px 5px;
-}
-
-::placeholder {
-    color: var(--grey);
-}
-
-textarea {
-    width: 100%;
-}
-
-select {
-    border: var(--line);
-}
-
-hr {
-    border-top: var(--line);
-}
-
-button {
-    --buttonColor: var(--primary);
-    appearance: none;
-    background-color: var(--buttonColor);
-    color: var(--textColor);
-    border-radius: 10px;
-    border: none;
-    padding: 5px 25px;
-    box-shadow: var(--level-1);
-    transition: 0.2s ease-in-out box-shadow;
-}
-
-button:hover {
-    box-shadow: var(--level-2);
-}
-
-button[disabled] {
-    opacity: 0.4;
-}
-
-button.cancel {
-    --buttonColor: var(--danger);
-    --textColor: white;
-}
-
-button.small {
-    font-size: var(--smallText);
-}
-
-.underline {
-    text-decoration: underline;
-    text-decoration-thickness: 0.05rem;
-    text-underline-offset: 0.3rem;
-}
-
-.layout {
-    /*Top padding is whatever we want plus our headerHeight*/
-    padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
-}
-
-
-
-.grid {
-    --gridCols: 2;
-    display: block;
-    grid-template-columns: repeat(var(--gridCols), 1fr);
-}
-
-.cols-3 {
-    --gridCols: 3;
-}
-
-
-.fake-logo {
-    font-size: var(--baseFontSize);
-    margin: 0;
-}
-
 /*Hero styles*/
+
 .hero-container {
     margin: 0 auto var(--headerHeight);
-    border: solid 0.5px var(--secondaryTextColor) ;
+    border: solid 0.5px var(--secondaryTextColor);
     text-align: center;
     min-height: 60vh;
     width: 100%;
@@ -234,6 +61,7 @@ button.small {
     color: var(--secondaryTextColor);
 }
 
+/*Genre/tag page styles*/
 
 .genre-content {
     text-align: center;
@@ -247,7 +75,7 @@ button.small {
 }
 
 .genre-content__quote {
-    font-size: var(--h4);
+    font-size: var(--h5);
     font-style: italic;
     color: var(--secondaryTextColor);
 }

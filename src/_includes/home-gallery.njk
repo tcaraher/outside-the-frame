@@ -1,23 +1,23 @@
 <div class="gallery grid--auto">
-        {% for image in gallery %}
+    {% for image in gallery %}
         {%- if image.homePage === true %}
             <div class="gallery__photo-block flex flex--col">
                 <a
-                    href="{{ image.tag }}/{{ image.title | slug }}"
-                    aria-label="Gallery image {{ image.title }}"
+                        href="{{ image.tag }}/{{ image.title | slug }}"
+                        aria-label="Gallery image {{ image.title }}"
                 >
-                {% img
-                    src=image.src,
-                    alt=image.alt,
-                    className="gallery__img",
-                    sizes="(max-width: 480px) 33vw, (min-width: 900px) 33vw, (min-width: 2000px) 33vw"
-                %}
+                    {% img
+                        src=image.src,
+                        alt=image.alt,
+                        className="gallery__img",
+                        sizes="(max-width: 480px) 33vw, (min-width: 900px) 33vw, (min-width: 2000px) 33vw" %}
                 </a>
                 <div class="photo-block__info">
                     <p>{{ image.date }}</p>
-                    <h2 class=""><a class="underline" href="{{ image.tag }}/{{ image.title | slug }}">{{ image.title }}</a></h2>
+                    <h2 class=""><a class="underline"
+                                    href="{{ image.tag }}/{{ image.title | slug }}">{{ image.title }}</a></h2>
                 </div>
             </div>
         {%- endif -%}
-        {% endfor %}
+    {% endfor %}
 </div>

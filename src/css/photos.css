@@ -1,0 +1,71 @@
+/*Gallery and images/photo styles*/
+
+.main-gallery {
+    max-width: 1100px;
+    margin: 3rem auto 0 auto;
+}
+
+.gallery {
+    gap: 4em;
+    padding: var(--headerHeight) 3rem;
+    margin: 0 auto;
+    list-style: none;
+}
+
+.gallery__photo-block {
+    max-width: calc(var(--gallery-photo-size) + 3rem);
+    background: var(--boxShadowBg);
+    box-shadow: var(--box-shadow);
+    margin: 0 auto;
+}
+
+.gallery__img {
+    max-width: var(--gallery-photo-size);
+    max-height: 40em;
+    object-fit: contain;
+    padding: 2rem;
+    filter: brightness(99%);
+    transition: filter 0.5s ease;
+}
+
+.gallery__img:hover {
+    filter: brightness(110%);
+    transform-origin: 50% 50%;
+    cursor: pointer;
+}
+
+.photo-block__info {
+    align-self: flex-start;
+    padding-left: 2rem;
+}
+
+.showcase__photo-block {
+    display: block;
+    margin: 0 auto;
+    width: 80vw;
+}
+
+.showcase__img {
+    max-height: 80vh;
+    max-width: 80vw;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.showcase__info {
+    align-self: stretch;
+    padding-left: 6rem;
+}
+
+.showcase__info p {
+    margin: 5px 0;
+}
+
+.showcase__info--title {
+    font-size: var(--h3);
+}
+
+.showcase__info--small-text {
+    font-size: var(--smallText);
+    color: var(--secondaryTextColor);
+}
