@@ -1,7 +1,4 @@
-const { DateTime } = require("luxon");
-
-// photo data, copied from exif tool command on batch of photos extracting details. fold in the json to see end of file for parsing function
-const photoExifData = [
+[
   {
     "SourceFile": "about-to-cross-a-line.jpg",
     "Title": "About to Cross a Line",
@@ -31,8 +28,7 @@ const photoExifData = [
     "AltTextAccessibility": "Dog sitting alone in an alleyway",
     "Subject": [
       "portfolio",
-      "street",
-      "portfolio-feature"
+      "street"
     ],
     "FocalLength": "9.0 mm",
     "ISO": 2000,
@@ -702,50 +698,3 @@ const photoExifData = [
     "Lens": "iPhone 14 Pro back triple camera 6.86mm f/1.78"
   }
 ]
-
-// Formats the exifDate into a readable string. Using luxon npm package as these exif dates come very abnormally formatted I think
-const formatDate = (exifDate) => {
-  const dt = DateTime.fromFormat( exifDate , "yyyy:MM:dd HH:mm:ss");
-  return dt.toFormat("DDD");
-}
-
-const gallery = photoExifData.map(photo => {
-
-  return {
-    title: photo.Title,
-    // Checks if the exif keywords(called Subject) contain the relevant  tags
-    tag: photo.Subject.includes('landscape') ? 'landscape' : photo.Subject.includes('street') ? 'street' : '',
-    // Checks if photo has been tagged to be featured
-    homePage: photo.Subject.includes('portfolio-feature'),
-    date: formatDate(photo.CreateDate),
-    location: photo.ImageDescription,
-    src: photo.SourceFile,
-    alt: photo.AltTextAccessibility || "",
-    imgDir: './src/photos/',
-    FocalLength: photo.FocalLength,
-    ISO: photo.ISO + " ISO",
-    Aperture: "f/" + photo.Aperture,
-    ShutterSpeedValue: photo.ShutterSpeedValue,
-    Make: photo.Make,
-    Model: photo.Model,
-    Lens: photo.Lens,
-
-  }
-})
-// console.log(gallery);
-module.exports = function () {
-  return gallery
-}
-
-// const dt = DateTime.fromFormat("2023:04:23 13:44:32", "yyyy:MM:dd HH:mm:ss");
-// const formatted = dt.toFormat("dd/MM/yyyy");
-// console.log(formatted);
-// {
-//     "title": "Foggy Mountain Dew",
-//   "tag": "landscape",
-//   "homePage": false,
-//   "date": "October 20, 2013",
-//   "credit": "Photo by Tom Caraher",
-//   "src": "landscape/foggy-mountain-dew.jpg",
-//   "alt": "Lined up bamboo scaffolding with car in shot",
-// }

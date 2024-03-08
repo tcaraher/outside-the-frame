@@ -1,0 +1,2 @@
+#excludes the original photo data from being included in eleventy's data cascade
+#_data/photoExifData.json

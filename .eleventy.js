@@ -65,44 +65,5 @@ module.exports = function (eleventyConfig) {
   }
 
 
-  // Previous standard attempts
-
-  // eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-  //   outputDir: "./_site/img/",
-  // 	// which file extensions to process
-  // 	extensions: "html",
-
-  // 	// Add any other Image utility options here:
-
-  // 	// optional, output image formats
-  // 	// formats: ["webp"],
-  // 	formats: ["auto"],
-
-  // 	// optional, output image widths
-  // 	widths: ["auto"],
-
-  // 	// optional, attributes assigned on <img> override these values.
-  // 	defaultAttributes: {
-  // 		loading: "lazy",
-  // 		decoding: "async"
-  // 	}
-  // });
-  // eleventyConfig.addShortcode("image", async function(src, alt, sizes) {
-  // 	let metadata = await Image(src, {
-  // 		widths: [300, 600],
-  // 		formats: ["avif", "jpeg"]
-  // 	});
-
-  // 	let imageAttributes = {
-  // 		alt,
-  // 		sizes,
-  // 		loading: "lazy",
-  // 		decoding: "async",
-  // 	};
-
-  // 	// You bet we throw an error on a missing alt (alt="" works okay)
-  // 	return Image.generateHTML(metadata, imageAttributes);
-  // });
-
 
 };

@@ -1,6 +1,6 @@
 :root {
   /*Sets gallery photo sizes and auto grid break*/
-  --gallery-photo-size: 40em;
+  --gallery-photo-size: 30em;
 }
 
 .grid--auto {

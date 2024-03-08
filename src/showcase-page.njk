@@ -7,16 +7,19 @@ pagination:
 permalink: "/{{image.tag}}/{{ image.title | slug }}/"
 ---
 
-<div class="showcase__photo-block flex flex--col">
+<div class="showcase__photo-block ">
     {% img
         src=image.src,
         alt=image.alt,
         className="showcase__img",
         sizes="(max-width: 480px) 90vw, (min-width: 640px) 90vw, (min-width:800px) 90vw,90vw" %}
     <div class="showcase__info">
-        <h1 class="photo-info__title">{{ image.title }}</h1>
-        <p class="photo-block__date">{{ image.date }}</p>
-        <p class=""> {{ image.location }} </p>
+        <h1 class="showcase__info--title underline">{{ image.title }}</h1>
+        <h2 > {{ image.location }} </h2>
+        <p class="showcase__info--small-text">{{ image.date }}</p>
+        <p class="showcase__info--small-text">{{ image.Make}} {{image.Model }}</p>
+        <p class="showcase__info--small-text">{{ image.FocalLength}} | {{image.Aperture}} | {{ image.ISO }}</p>
+
     </div>
 </div>
 

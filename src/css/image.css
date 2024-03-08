@@ -5,7 +5,7 @@
 
 .gallery {
     gap: 4em;
-    padding: 0 3rem;
+    padding: var(--headerHeight) 3rem;
     margin: 0 auto;
     list-style: none;
 }
@@ -38,17 +38,8 @@
     padding-left: 2rem;
 }
 
-.photo-info__title {
-    font-size: var(--h4);
-}
-
-
-.photo-block__date {
-    /*margin: 1rem 0 0;*/
-}
-
-
 .showcase__photo-block {
+    display: block;
     margin: 0 auto;
     width: 80vw;
 }
@@ -64,10 +55,18 @@
     align-self: stretch;
     padding-left: 6rem;
 }
+.showcase__info p {
+    margin: 5px 0;
+}
 
+.showcase__info--title {
+    font-size: var(--h3);
+}
 
-
-
+.showcase__info--small-text {
+    font-size: var(--smallText);
+    color: var(--secondaryTextColor);
+}
 
 .gallery-h1 {
     text-align: center;

@@ -7,6 +7,9 @@
 @import url("image.css");
 @import url("nav.css");
 
+html,body {
+    height: 100%;
+}
 
 html {
     font-size: var(--baseFontSize);
@@ -19,35 +22,28 @@ body {
     line-height: 1.65;
     color: var(--textColor);
     background: var(--background);
+    display: flex;
+    flex-direction: column;
 }
 
 header {
     /* --headerBkg: var(--darkBlue); */
     /* color: white; */
     height: var(--headerHeight);
-    background: var(--background);
-    box-shadow: var(--level-2);
+    background: var(--secondaryBackground);
+    box-shadow: var(--box-shadow);
+    /*border-bottom: solid 0.5px;*/
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 var(--containerPadding);
 }
 
-/*header nav a {*/
-/*    color: var(--textColor);*/
-/*    text-decoration: none;*/
-/*    border-bottom: solid 2px var(--attention);*/
-/*}*/
-
-/*header nav a + a {*/
-/*    margin-left: 10px;*/
-/*}*/
-
 
 
 main {
     padding: calc(var(--headerHeight) + 3rem) 3em;
-
+    flex: 1 0 auto;
 }
 
 article {
@@ -55,9 +51,10 @@ article {
 }
 
 footer {
+    flex-shrink: 0;
     --footerTextColor: var(--lightGrey);
     color: var(--footerTextColor);
-    background: var(--black);
+    background: var(--secondaryBackground);
     padding: 2rem var(--containerPadding);
 }
 
@@ -183,6 +180,12 @@ button.small {
     font-size: var(--smallText);
 }
 
+.underline {
+    text-decoration: underline;
+    text-decoration-thickness: 0.05rem;
+    text-underline-offset: 0.3rem;
+}
+
 .layout {
     /*Top padding is whatever we want plus our headerHeight*/
     padding: calc(3rem + var(--headerHeight)) var(--containerPadding);
@@ -208,11 +211,10 @@ button.small {
 
 /*Hero styles*/
 .hero-container {
-    margin: 0 auto;
-    /*border: solid 2px;*/
+    margin: 0 auto var(--headerHeight);
+    border: solid 0.5px var(--secondaryTextColor) ;
     text-align: center;
-    min-height: 40rem;
-    max-height: 70vh;
+    min-height: 60vh;
     width: 100%;
     display: flex;
     flex-direction: column;
