@@ -1,7 +1,7 @@
 <div class="gallery grid--auto">
         {% for image in gallery %}
         {%- if image.homePage === true %}
-            <div class="photo-block">
+            <div class="gallery__photo-block flex flex--col">
                 <a
                     href="{{ image.tag }}/{{ image.title | slug }}"
                     aria-label="Gallery image {{ image.title }}"
@@ -9,8 +9,8 @@
                 {% img
                     src=image.src,
                     alt=image.alt,
-                    className="photo-block__img",
-                    sizes="(max-width: 480px) 40vw, (min-width: 800px) 50vw, (min-width: 2000px) 50vw"
+                    className="gallery__img",
+                    sizes="(max-width: 480px) 33vw, (min-width: 900px) 33vw, (min-width: 2000px) 33vw"
                 %}
                 </a>
                 <div class="photo-block__info">

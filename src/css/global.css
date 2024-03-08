@@ -46,8 +46,12 @@ header {
 
 
 main {
-    padding: calc(var(--headerHeight) - 3rem) 0;
+    padding: calc(var(--headerHeight) + 3rem) 3em;
 
+}
+
+article {
+    margin: 0 auto;
 }
 
 footer {
@@ -68,8 +72,10 @@ footer p {
 }
 
 p {
+    font-size: 1em;
     margin-bottom: 1.15rem;
     max-width: 40em;
+
 }
 
 a {
@@ -181,25 +187,6 @@ button.small {
     --gridCols: 3;
 }
 
-.flex {
-    --justify-content: space-between;
-    display: flex;
-    justify-content: var(--justify-content);
-}
-
-.flex-around {
-    --justify-content: space-around;
-}
-
-@media only screen and (min-width: 500px) {
-    :root {
-        --baseFontSize: 112%;
-    }
-
-    .grid {
-        display: grid;
-    }
-}
 
 .fake-logo {
     font-size: var(--baseFontSize);
@@ -210,6 +197,7 @@ button.small {
 .hero-container {
     margin: 0 auto;
     /*border: solid 2px;*/
+    text-align: center;
     min-height: 40rem;
     max-height: 70vh;
     width: 100%;
@@ -233,8 +221,18 @@ button.small {
 
 
 .genre-content {
-    font-size: var(--h4);
     text-align: center;
     height: 20rem;
     width: 80vw;
+    margin: 0 auto;
+}
+
+.genre-content__heading {
+    font-size: var(--h2);
+}
+
+.genre-content__quote {
+    font-size: var(--h4);
+    font-style: italic;
+    color: var(--secondaryTextColor);
 }

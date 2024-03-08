@@ -15,14 +15,14 @@ permalink: "/{{image.tag}}/{{ image.title | slug }}/"
 <body>
     {% include "header.njk" %}
     <main>
-        <div class="photo-block photo-block--feature" >
+        <div class="showcase__photo-block flex flex--col" >
                 {% img
                 src=image.src,
                 alt=image.alt,
-                className=".photo-block__img photo-block__img--feature",
-                sizes="(max-width: 480px) 80vw, (min-width: 640px) 800vw, (min-width: 1000px) 80vw, 80vw"
+                className="showcase__img",
+                sizes="(max-width: 480px) 90vw, (min-width: 640px) 90vw, (min-width:800px) 90vw,90vw"
                 %}
-                <div class="photo-info">
+                <div class="showcase__info">
                     <h1 class="photo-info__title">{{ image.title }}</h1>
                     <p class="photo-block__date">{{ image.date }}</p>
                     <p class=""> {{ image.location }} </p>

@@ -1,16 +1,27 @@
-/*noinspection ALL*/
+:root {
+  /*Sets gallery photo sizes and auto grid break*/
+  --gallery-photo-size: 40em;
+}
+
 .grid--auto {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(var(--gallery-photo-size), 1fr));
   align-items: center;
 }
 
-.flex--center {
+.flex {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  /*margin: 0 auto;*/
+}
 
+.flex--center {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.flex--col {
+  flex-direction: column;
 }
 .container {
   display: grid;

@@ -1,6 +1,6 @@
 :root {
-    --baseFontSize: 100%;
-    --h1xl: 6em;
+    /*--baseFontSize: 2em;*/
+    --h1xl: 4em;
     --h1: 3em;
     --h2: 2.441em;
     --h3: 1.953em;
@@ -12,3 +12,8 @@
     --bodyFontFamily: le-monde-livre-std;
 }
 
+/*@media only screen and (max-width: 640px) {*/
+/*    :root {*/
+/*        --baseFontSize: 2.5em;*/
+/*    }*/
+/*}*/

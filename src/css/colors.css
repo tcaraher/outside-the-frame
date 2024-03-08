@@ -3,10 +3,10 @@
     --red: #ff5470;
     --yellow: #8e8e8e;
     --black: #050408;
-    --darkGrey: #1f1f1f7d ;
+    --darkGrey: rgba(21, 21, 21, 0.49);
     --darkBlue: #00214d;
     --grey: #757575;
-    --lightGrey: #f2f4f6;
+    --lightGrey: #d5d5d5;
     --white: #f7f7f7;
 
     /* Define Colors intentions */
@@ -19,6 +19,7 @@
     --secondaryTextColor: var(--grey);
     --lineColor: var(--grey);
     --line: solid 1px var(--grey);
+    --boxShadowBg: var(--background);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -27,6 +28,6 @@
         --secondaryTextColor: var(--lightGrey);
         --secondaryBackground: var(--darkGrey);
         --background: var(--black);
-
+        --boxShadowBg: var(--darkGrey);
     }
 }
