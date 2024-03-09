@@ -1,6 +1,4 @@
 :root {
-    --green: #00ebc7;
-    --red: #ff5470;
     --yellow: #8e8e8e;
     --black: #050408;
     --darkGrey: rgba(21, 21, 21, 0.49);
@@ -10,9 +8,7 @@
     --white: #f7f7f7;
 
     /* Define Colors intentions */
-    --primary: var(--green);
-    --danger: var(--red);
-    --attention: var(--yellow);
+    --attention: var(--grey);
     --background: var(--white);
     --secondaryBackground: var(--lightGrey);
     --textColor: var(--black);
