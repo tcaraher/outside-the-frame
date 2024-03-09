@@ -1,10 +1,10 @@
 @import url("typography.css");
 @import url("colors.css");
 @import url("elevations.css");
-@import url("layouts.css");
+@import url("./utilities/layouts.css");
 @import url("photos.css");
-@import url("header.css");
-@import url("footer.css");
+@import url("./partials/header.css");
+@import url("./partials/footer.css");
 
 html, body {
     height: 100%;
