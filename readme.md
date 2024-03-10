@@ -21,7 +21,7 @@ Just paste your exported exif data for your photographs in json format (preferab
 - BEM css naming, but using some global styles and semantic elements as well.
 - CSS properties ordered based on categories/relevance. I used the built in WebStorm recommendations. I am not a fan of alphabetical sorting of properties - but to each their own.
 
-## Sources-
+## Sources
 
 Code was inspired by a number of sources, including the eleventy documentation, mdn documentation and various blog posts with more specific help/tutorials. It was all applied to my own project and often altered significantly to suit my application, although the examples in the eleventy docs were usually very well suited to what I needed to do.
 
