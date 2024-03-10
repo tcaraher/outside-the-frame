@@ -33,7 +33,7 @@ main {
     flex: 1 0 auto;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 720px) {
     main {
         padding: calc(var(--headerHeight) + 3rem) 0;
     }

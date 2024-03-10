@@ -726,7 +726,7 @@ const gallery = photoExifData.map(photo => {
     FocalLength: photo.FocalLength,
     ISO: photo.ISO + " ISO",
     Aperture: "f/" + photo.Aperture,
-    ShutterSpeedValue: photo.ShutterSpeedValue,
+    ShutterSpeed: photo.ShutterSpeedValue,
     Make: photo.Make,
     Model: photo.Model,
     Lens: photo.Lens,

@@ -7,9 +7,9 @@
     /*Media query sizes*/
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 720px) {
     :root {
-        --gallery-photo-size: 27em;
+        --gallery-photo-size: 24em;
     }
 }
 
