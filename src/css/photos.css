@@ -7,16 +7,23 @@
 
 .gallery {
     gap: 4em;
-    padding: var(--headerHeight) 3rem;
+    padding: var(--headerHeight) 0;
     margin: 0 auto;
     list-style: none;
 }
 
+
 .gallery__photo-block {
     max-width: calc(var(--gallery-photo-size) + 3rem);
     background: var(--boxShadowBg);
-    box-shadow: var(--box-shadow);
+    box-shadow: var(--level-2);
     margin: 0 auto;
+}
+
+@media (prefers-color-scheme: dark) {
+    .gallery__photo-block {
+        box-shadow: var(--level-2-dark);
+    }
 }
 
 .gallery__img {
@@ -55,6 +62,12 @@
 .showcase__info {
     align-self: stretch;
     padding-left: 6rem;
+}
+
+@media screen and (max-width: 900px) {
+    .showcase__info {
+        padding-left: 2rem;
+    }
 }
 
 .showcase__info p {

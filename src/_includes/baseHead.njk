@@ -1,3 +1,15 @@
-
+<head>
+    {% metagen
+        title=title or metadata.title,
+        desc=desc or metadata.desc,
+        url=url + page.url,
+        img=image,
+        img_alt=alt,
+        twitter_handle="@tomcaraher",
+        name= "Tom Caraher"
+    %}
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16.png">
     <link rel="stylesheet" href="https://use.typekit.net/euo1fyy.css">
     <link rel="stylesheet" href="/css/global.css">
+</head>

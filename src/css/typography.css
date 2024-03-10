@@ -41,3 +41,9 @@ h5 {
     text-decoration-thickness: 0.05rem;
     text-underline-offset: 0.3rem;
 }
+
+@media (max-width: 900px) {
+    :root {
+        --baseFontSize: 0.8em;
+    }
+}

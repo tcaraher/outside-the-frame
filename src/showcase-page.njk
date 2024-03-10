@@ -1,25 +1,48 @@
 ---
-layout: layout.njk
 pagination:
     data: gallery
     size: 1
     alias: image
 permalink: "/{{image.tag}}/{{ image.title | slug }}/"
+url: https://outsidetheframe.photography
 ---
 
-<div class="showcase__photo-block ">
-    {% img
-        src=image.src,
-        alt=image.alt,
-        className="showcase__img",
-        sizes="(max-width: 480px) 90vw, (min-width: 640px) 90vw, (min-width:800px) 90vw,90vw" %}
-    <div class="showcase__info">
-        <h1 class="showcase__info--title underline">{{ image.title }}</h1>
-        <h2> {{ image.location }} </h2>
-        <p class="showcase__info--small-text">{{ image.date }}</p>
-        <p class="showcase__info--small-text">{{ image.Make }} {{ image.Model }}</p>
-        <p class="showcase__info--small-text">{{ image.FocalLength }} | {{ image.Aperture }} | {{ image.ISO }}</p>
+{#not using layout.njk here as I need to generate the meta information#}
 
-    </div>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% metagen
+            title=image.title,
+            desc=image.title + " | " + image.location + " | " + image.date,
+            url=url + "/" + image.tag + "/" + image.title | slug + "/",
+            img=url + image.imgDir + image.src,
+            img_alt=image.alt %}
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16.png">
+        <link rel="stylesheet" href="https://use.typekit.net/euo1fyy.css">
+        <link rel="stylesheet" href="/css/global.css">
+    </head>
+    <body>
+        {% include "header.njk" %}
+        <main>
+            <div class="showcase__photo-block ">
+                {% img
+                    src=image.src,
+                    alt=image.alt,
+                    className="showcase__img",
+                    sizes="(max-width: 480px) 90vw, (min-width: 640px) 90vw, (min-width:800px) 90vw,90vw" %}
+                <div class="showcase__info">
+                    <h1 class="showcase__info--title underline">{{ image.title }}</h1>
+                    <h2> {{ image.location }} </h2>
+                    <p class="showcase__info--small-text">{{ image.date }}</p>
+                    <p class="showcase__info--small-text">{{ image.Make }} {{ image.Model }}</p>
+                    <p class="showcase__info--small-text">{{ image.FocalLength }} | {{ image.Aperture }}
+                        | {{ image.ISO }}</p>
+
+                </div>
+            </div>
+        </main>
+        {% include "footer.njk" %}
+    </body>
 

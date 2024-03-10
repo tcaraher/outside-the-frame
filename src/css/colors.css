@@ -4,8 +4,8 @@
     --darkGrey: rgba(21, 21, 21, 0.49);
     --darkBlue: #00214d;
     --grey: #757575;
-    --lightGrey: #d5d5d5;
-    --white: #f7f7f7;
+    --lightGrey: #f7f7f7;
+    --white: #fafafa;
 
     /* Define Colors intentions */
     --attention: var(--grey);
@@ -18,6 +18,16 @@
     --boxShadowBg: var(--background);
 }
 
+
+/*@media (prefers-color-scheme: light) {*/
+/*    body {*/
+/*        --textColor: var(--black);*/
+/*        --secondaryTextColor: var(--grey);*/
+/*        --secondaryBackground: var(--lightGrey);*/
+/*        --background: var(--white);*/
+/*        --boxShadowBg: var(--background);*/
+/*    }*/
+/*}*/
 /*Sets color theme based on pre-defined user preference*/
 
 @media (prefers-color-scheme: dark) {

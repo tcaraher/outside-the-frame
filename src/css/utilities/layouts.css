@@ -4,8 +4,14 @@
     --headerHeight: 4em;
     /*Sets gallery photo sizes and auto grid break*/
     --gallery-photo-size: 30em;
+    /*Media query sizes*/
 }
 
+@media screen and (max-width: 900px) {
+    :root {
+        --gallery-photo-size: 27em;
+    }
+}
 
 .grid--auto {
     display: grid;

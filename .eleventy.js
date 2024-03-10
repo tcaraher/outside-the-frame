@@ -1,12 +1,12 @@
 const Image = require('@11ty/eleventy-img')
 const eleventyNavigationPlugin = require('@11ty/eleventy-navigation')
-
+const metagen = require('eleventy-plugin-metagen');
 module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy('./src/css')
-
+  eleventyConfig.addPassthroughCopy( "./src/favicon");
   eleventyConfig.addPlugin(eleventyNavigationPlugin)
-
+  eleventyConfig.addPlugin(metagen);
   // Config for image component. See docs for img plug in - very similar to this.
   eleventyConfig.addShortcode('img', async function ({ src, alt, widths, className, imgDir, sizes = '100vw' }) {
     if (alt === undefined) {

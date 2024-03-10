@@ -1,7 +1,5 @@
 footer {
     flex-shrink: 0;
-    --footerTextColor: var(--lightGrey);
-    color: var(--footerTextColor);
     background: var(--secondaryBackground);
     padding: 2rem var(--containerPadding);
 }
