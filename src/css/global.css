@@ -8,10 +8,10 @@
 
 html, body {
     height: 100%;
+    overflow-x: hidden;
 }
 
 html {
-    font-size: var(--baseFontSize);
     box-sizing: border-box;
 }
 
@@ -24,6 +24,8 @@ body {
     background: var(--background);
     display: flex;
     flex-direction: column;
+    font-size: var(--baseFontSize);
+
 }
 
 main {
