@@ -5,6 +5,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy('./src/css')
   eleventyConfig.addPassthroughCopy( "./src/favicon");
+  eleventyConfig.addPassthroughCopy( "./src/images");
+
   eleventyConfig.addPlugin(eleventyNavigationPlugin)
   eleventyConfig.addPlugin(metagen);
   // Config for image component. See docs for img plug in - very similar to this.
