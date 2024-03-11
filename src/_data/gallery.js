@@ -456,8 +456,8 @@ const photoExifData = [
   },
   {
     "SourceFile": "ridgid.jpg",
-    "Title": "Ridgid",
-    "ImageDescription": "Hiking Mt Brandon",
+    "Title": "Rigid",
+    "ImageDescription": "Hiking Mt Brandon, Kerry, Ireland",
     "CreateDate": "2017:05:08 12:26:27",
     "AltTextAccessibility": "Panorama of ridgeline",
     "Subject": [
